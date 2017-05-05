@@ -1,5 +1,6 @@
 # CV_template <br />
 CV template en LaTeX version en français. <br />
+Plus mon CV original de l'Université Laval. <br />
 LaTeX CV template in englsih version. <br />
 The original version is from a friend of mine. I have updated the template to work with babel[french]. <br />
 I still have an issue with the title and the è, é, à, ç, and french symbol.  <br />
