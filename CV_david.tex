@@ -10,7 +10,7 @@
 \usepackage[T1]{fontenc}      % LaTeX
 \usepackage{fontawesome}
 \usepackage{tikz}
-	\usetikzlibrary{babel} %correction for the french version of the document
+	\usetikzlibrary{babel} %correction for the french version of the document with XeLaTeX
 	\usetikzlibrary{shapes.geometric}
 	\usetikzlibrary{calc}
 	\usetikzlibrary{decorations.pathreplacing}
@@ -21,6 +21,7 @@
 \usepackage{tabularx}
 \usepackage{calc}
 \usepackage{ifthen}
+\usepackage{coolstr}
 \usepackage{coolstr}
 \usepackage{textcase}
 \usepackage{amsmath}
@@ -49,9 +50,7 @@
 \newcommand{\cvaddress}{2435, Chemin Sainte-foy, app 1B\newline Québec}
 \newcommand{\cvlocation}{Québec, Canada}
 \newcommand{\cvlinkedin}{https://www.linkedin.com/in/david-beauchemin-918343108/}
-\newcommand{\cvwhitewords}{Agile,Applications,ASP.NET,Build,C\#,Code,Collaborate,Data,Data Scientist,
-Design,Development,Engineering,Environment,Java,Javascript,Knowledge,Machine Learning,Mobile,.NET,Product,
-Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
+\newcommand{\github}{https://github.com/davebulaval}
 
 %Command for vertical centering of text into tabular
 \renewcommand{\tabularxcolumn}[1]{m{#1}}
@@ -132,10 +131,12 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 	\foreach \x in #1{\x \- \,}}}
 
 %Command to create section Title
+% The command \substr dont work with all the character such as é, à.
+% To make it work I used title without those character. Didn't found other solution.
 \newcommand\sectiontitle[1]{
 	\bfseries\LARGE
-	\textcolor{mainblue}{\substr{#1}{1}{3}}%
-	\textcolor{black}{\substr{#1}{4}{end}}
+	\textcolor{mainblue}{\substr{#1}{1}{4}}%
+	\textcolor{black}{\substr{#1}{5}{end}}
 	\normalfont\normalsize}
 
 %Command to let mark in order to trace tikz picture
@@ -143,14 +144,14 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 
 %Command to insert a new Education Statement
 \newcommand{\EduStatement}[5]{
-	\normalfont\normalsize
+	%\normalfont\normalsize
 	\vspace{-\baselineskip}
 	\tikzmark{mark1}
 	\vspace{12pt}\\
 	#4\\
 	\large{\textbf{#5}}\\
 	\textcolor{mainblue}{#3\small\textbf{\hfill [#1 - #2]}}\\
-	\normalfont\normalsize
+	%\normalfont\normalsize 
 	\tikzmark{mark2}
 %	\begin{tikzpicture}[overlay, remember picture]
 %		\draw [decoration={brace,mirror,raise=10pt,amplitude=1em},decorate,ultra thick,mainblue]
@@ -160,7 +161,7 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 
 %Command to insert a new Experience Statement
 \newenvironment{ExpStatement}[4]{
-	\normalfont\normalsize
+	%\normalfont\normalsize
 	\vspace{-\baselineskip}
 	\tikzmark{mark1}
 	\vspace{15pt}\\
@@ -170,7 +171,7 @@ Projects,Software,Solutions,SQL,Team,Technologies,Testing,Tools,Web}
 	\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,parsep=0pt]}
 		{\vspace{-\baselineskip}
 	\end{itemize}
-	\normalfont\normalsize
+	%\normalfont\normalsize
 	\tikzmark{mark2}
 %	\begin{tikzpicture}[overlay, remember picture]
 %		\draw [decoration={brace,mirror,raise=10pt,amplitude=1em},decorate,ultra thick,mainblue]
@@ -209,6 +210,7 @@ urlcolor={blue!80!black}}
 			\icon{\faPhone}&\cvphonenumber\\
 			\icon{\faHome}&\cvaddress\\
 			\icon{\faMapMarker}&\cvlocation\\
+			\icon{\faGithub}&\href{\github}{Voir GitHub} \\
 			\icon{\faLinkedin}&\href{\cvlinkedin}{Voir profil}\\
 		\end{tabularx}
 	\end{table}
@@ -224,18 +226,15 @@ urlcolor={blue!80!black}}
 	\end{table}
 
 	\profilesection{Langages de programmation}
-	\skillbar{ Scilab /1.5, HTML/1,C/2,Git \faGithub/3.2,\LaTeX/5, Markdown /4.5, R/5.6,Python/5.5,VBA/5.5,SAS/2, SQL/1.5}
+	\skillbar{ Scilab /1.5, HTML/1,C/2,Git \faGithub/3.2,\LaTeX/5, Markdown /4.5, R/5.6,Python/5.5,VBA/5.5,SAS/2, SQL/3.5}
 \end{textblock}
 
-\begin{textblock}{11.35}(9.25, 0.25)
-	\printww{\cvwhitewords}
-\end{textblock}
 
 \begin{textblock}{11.35}(9.25, 1)
 	\sectiontitle{Formations}
 	\EduStatement{09/2015}{Présent}{Université Laval}{Baccalauréat}{Actuariat}
 
-	\sectiontitle{Expérience}
+	\sectiontitle{Parcours \ professionnel}
 	\begin{ExpStatement}{[09/2016}{Actuel}{Université Laval - Actuel}{Auxiliaire de cours}
 		\item Correction d'examens - Introduction à l'actuariat I
 		\item Création d'exercices - Introduction à l'actuariat I
@@ -272,23 +271,30 @@ urlcolor={blue!80!black}}
 	\mybox{Sens des affaires} \mybox{Esprit critique} \mybox{Autodidacte} \mybox{Facilité d'apprentissage}\\
 	\newline
 	\sectiontitle{Accomplissements}\\
-	Projets informatiques
+	\textbf{Projets informatiques}
 	\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,
 	parsep=0pt]
+		\item Participation à la \href{https://github.com/davebulaval/raquebec-atelier-introduction-r}{formation d'introduction}  à R au colloque R à Québec 2017
 		\item Implication dans le développement d'un \href{http://ctan.org/pkg/actuarialsymbol}{package LaTeX} 
 		\item Assemblage d'un serveur à domicile
 		\item Assemblage et programmation d'un ordinateur portable Pi-Top
 		\item Assemblage d'un centre média domestique
 	\end{itemize}
-	Sportif
+	\textbf{Sportif}
 	\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,
 	parsep=0pt]
-		\item Cross-country collégial 2010-2011
+		\item Cross-country collégial en 2010-2011
 		\item Demi-Marathon : Montréal 2008, Québec 2012 (Meilleur temps 1h32)
 		\item Marathon : Ottawa 2011, Québec 2011, Montréal 2011 (Meilleur temps 3h35)
 		\item Triathlon demi-Ironman : Montréal 2011 (6h50)
 	\end{itemize}
-	\sectiontitle{Intérêts}\\
-	Science \separator Lecture \separator Activités sportives \separator Hockey \separator Machine Learning \separator Voyage \separator Finance
+	\textbf{Communautaire}
+		\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,
+	parsep=0pt]
+		\item Vice-président aux événements sociaux depuis avril 2016 - 
+		\item Bénévolat d'aide à l'entretien auprès de l'ACSA en 2015
+	\end{itemize}
+	\sectiontitle{Loisirs}\\
+	Science \separator Lecture \separator Activités sportives \separator Hockey \separator Machine Learning \separator Voyage \separator Finance \separator Course à pied \separator Voyages \separator Cinéma
 \end{textblock}
 \end{document}
