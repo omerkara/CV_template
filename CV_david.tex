@@ -44,10 +44,11 @@
 \newcommand{\cvfirstname}{David}
 \newcommand{\cvlastname}{Beauchemin}
 \newcommand{\cvtitle}{B. Sc. Actuariat}
+\newcommand{\coverletter}{Lettre de présentation}
 
 \newcommand{\cvemail}{david.beauchemin.5@ulaval.ca}
 \newcommand{\cvphonenumber}{(514) 250-3616}
-\newcommand{\cvaddress}{2435, Chemin Sainte-foy, app 1B\newline Québec}
+\newcommand{\cvaddress}{2435, Chemin Sainte-foy, app 1B,  Québec}
 \newcommand{\cvlocation}{Québec, Canada}
 \newcommand{\cvlinkedin}{https://www.linkedin.com/in/david-beauchemin-918343108/}
 \newcommand{\github}{https://github.com/davebulaval}
@@ -153,10 +154,23 @@
 	\textcolor{mainblue}{#3\small\textbf{\hfill [#1 - #2]}}\\
 	%\normalfont\normalsize 
 	\tikzmark{mark2}
-%	\begin{tikzpicture}[overlay, remember picture]
-%		\draw [decoration={brace,mirror,raise=10pt,amplitude=1em},decorate,ultra thick,mainblue]
-% 		(mark1) --  (mark2);
-%	\end{tikzpicture}
+	}
+
+%Command to insert a new title for cover letter
+\newcommand{\TitleCoverLetter}[5]{
+	%\normalfont\normalsize
+	\vspace{-\baselineskip}
+	\tikzmark{mark1}
+	\vspace{12pt}\\
+	%\LARGE\textcolor{mainblue}{\textit{#5}}
+	\sectiontitle{#5}
+	\\[5pt]
+	\normalsize 
+	\textbf{#4}\\
+	\textcolor{mainblue}{#2\small\textbf{\hfill #1}}\\
+	#3
+	%\normalfont\normalsize 
+	\tikzmark{mark2}
 	}
 
 %Command to insert a new Experience Statement
@@ -165,7 +179,7 @@
 	\vspace{-\baselineskip}
 	\tikzmark{mark1}
 	\vspace{15pt}\\
-	#3\\
+	\textcolor{mainblue}{#3\small\textbf{\hfill [#1 - #2]}}\\
 	\large{\textbf{#4}}
 	\small
 	\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,parsep=0pt]}
@@ -173,10 +187,6 @@
 	\end{itemize}
 	%\normalfont\normalsize
 	\tikzmark{mark2}
-%	\begin{tikzpicture}[overlay, remember picture]
-%		\draw [decoration={brace,mirror,raise=10pt,amplitude=1em},decorate,ultra thick,mainblue]
-% 		(mark1) --  (mark2);
-%	\end{tikzpicture}
 	\\}
 
 \pagestyle{empty} % Disable headers and footers
@@ -226,7 +236,7 @@ urlcolor={blue!80!black}}
 	\end{table}
 
 	\profilesection{Langages de programmation}
-	\skillbar{ Scilab /1.5, HTML/1,C/2,Git \faGithub/3.2,\LaTeX/5, Markdown /4.5, R/5.6,Python/5.5,VBA/5.5,SAS/2, SQL/3.5}
+	\skillbar{C/2,Git \faGithub/3.2,\LaTeX/5, Markdown /4.5, R/5.6,Python/5.5,VBA/5.5,SAS/2, SQL/3.5}
 \end{textblock}
 
 
@@ -235,15 +245,14 @@ urlcolor={blue!80!black}}
 	\EduStatement{09/2015}{Présent}{Université Laval}{Baccalauréat}{Actuariat}
 
 	\sectiontitle{Parcours \ professionnel}
-	\begin{ExpStatement}{[09/2016}{Actuel}{Université Laval - Actuel}{Auxiliaire de cours}
+	\begin{ExpStatement}{09/2016}{Présent}{Université Laval, École d'actuariat}{Auxiliaire de cours}
 		\item Correction d'examens - Introduction à l'actuariat I
 		\item Création d'exercices - Introduction à l'actuariat I
 		\item Correction d'examens - Gestion du risque financier I
 		\item Création d'un document d'exercice - Gestion du risque financier I
-		\item Présentation sur RMarkdown et les outils de travail collaboratif - École d'actuariat
-		\item Implication dans la création d'un package pour LaTeX - École d'actuariat
+		\item Présentation sur RMarkdown et les outils de travail collaboratif
 	\end{ExpStatement}
-	\begin{ExpStatement}{11/2013}{10/2014}{Industrielle alliance, Assurance auto et habitation - [11/2013 - 10/2014] }{Agent en assurance de dommage}
+	\begin{ExpStatement}{11/2013}{10/2014}{Industrielle alliance, Assurance auto et habitation}{Agent en assurance de dommage}
 		\item Compléter les soumissions clients
 		\item Répondre aux besoins clients
 		\item Conseiller les clients en assurance de dommage
@@ -257,10 +266,11 @@ urlcolor={blue!80!black}}
 			\toprule
 			\centering\textcolor{black}{Examen}&\centering\textbf{Description}&\textbf{Date}\\
 			\midrule
-			P/1&Probability&01/2016\\
-			FM/2&Financial Mathematics&06/2016\\
-			ECON&VEE Economics&11/2016\\
-			CORPFIN&VEE Corporate Finance&11/2016\\
+			P/1 & Probability & \textcolor{mainblue}{\textbf{\textbf{01/2016}}}\\
+			FM/2 & Financial Mathematics & \textcolor{mainblue}{\textbf{06/2016}}\\
+			MFE/3 & Models for Financial Economics & \textcolor{mainblue}{\textbf{05/2017}}\\
+			ECON & VEE Economics & \textcolor{mainblue}{\textbf{11/2016}}\\
+			CORPFIN & VEE Corporate Finance & \textcolor{mainblue}{\textbf{11/2016}}\\
 			\bottomrule
  		\end{tabularx}
  	\end{table}
@@ -270,12 +280,12 @@ urlcolor={blue!80!black}}
 	\mybox{Travaillant} \mybox{Individualisation} \mybox{Esprit d'équipe} \mybox{Persévérance} \\
 	\mybox{Sens des affaires} \mybox{Esprit critique} \mybox{Autodidacte} \mybox{Facilité d'apprentissage}\\
 	\newline
-	\sectiontitle{Accomplissements}\\
+	\sectiontitle{Accomplissements}\smallskip \newline
 	\textbf{Projets informatiques}
 	\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,
 	parsep=0pt]
 		\item Participation à la \href{https://github.com/davebulaval/raquebec-atelier-introduction-r}{formation d'introduction}  à R au colloque R à Québec 2017
-		\item Implication dans le développement d'un \href{http://ctan.org/pkg/actuarialsymbol}{package LaTeX} 
+		\item Implication dans le développement d'un \href{http://ctan.org/pkg/actuarialsymbol}{package \LaTeX} 
 		\item Assemblage d'un serveur à domicile
 		\item Assemblage et programmation d'un ordinateur portable Pi-Top
 		\item Assemblage d'un centre média domestique
@@ -291,10 +301,93 @@ urlcolor={blue!80!black}}
 	\textbf{Communautaire}
 		\begin{itemize}[label=\textcolor{mainblue}{\textbullet},topsep=0pt,partopsep=0pt,itemsep=0pt,
 	parsep=0pt]
-		\item Vice-président aux événements sociaux depuis avril 2016 - 
+		\item Vice-président aux événements sociaux depuis avril 2016 
 		\item Bénévolat d'aide à l'entretien auprès de l'ACSA en 2015
 	\end{itemize}
+	\smallskip
 	\sectiontitle{Loisirs}\\
 	Science \separator Lecture \separator Activités sportives \separator Hockey \separator Machine Learning \separator Voyage \separator Finance \separator Course à pied \separator Voyages \separator Cinéma
+\end{textblock}
+
+\newpage
+
+\sidebar
+\begin{textblock}{7}(0.5,1)
+	\HUGE
+	\cvfirstname\\
+	\bfseries
+	\cvlastname\\
+	\huge
+	\textcolor{mainblue}{\coverletter}\\
+\end{textblock}
+\bigskip
+\begin{textblock}{7}(0.5, 3.75)
+	\profilesection{Information générale}	
+	\vspace{-\baselineskip}
+	\begin{table}
+		\begin{tabularx}{7cm}{cX}
+			\icon{\faAt}&\bfseries\href{mailto:\cvemail}\cvemail\\
+			\icon{\faPhone}&\cvphonenumber\\
+			\icon{\faHome}&\cvaddress\\
+			\icon{\faMapMarker}&\cvlocation\\
+			\icon{\faGithub}&\href{\github}{Voir GitHub} \\
+			\icon{\faLinkedin}&\href{\cvlinkedin}{Voir profil}\\
+		\end{tabularx}
+	\end{table}
+
+	\profilesection{En bref}
+	\vspace{-\baselineskip}
+	
+	\ \ \ \ \ \textcolor{mainblue}{\textbf{Je}} suis originaire de Laval et j'ai choisi de venir étudier à Québec afin de découvrir une nouvelle ville. J'ai originalement entrepris une formation professionnelle en soudure montage. À la fin de ma formation, j'ai décidé de poursuivre mes études collégiales afin d'intégrer les forces armées canadiennes et de joindre le programme de formation des officiers au collège militaire de Kingston. N'ayant pas été sélectionné pour le programme, j'ai intégré la réserve et entamer un baccalauréat en sociologie. Ma curiosité intellectuelle n'étant pas satisfaite, j'ai décidé d'intégrer le marché du travail à titre d'agent d'assurance. Cette décision m'a amené à découvrir l'actuariat. J'ai par la suite complété mes mathématiques secondaires et collégiales en moins de 8 mois afin d'entamer ma formation universitaire en septembre 2015.
+	
+	\bigskip
+	\profilesection{Plus grande fierté}
+	\vspace{-\baselineskip}
+	\begin{table}
+		\begin{tabularx}{7cm}{cX}
+			\icon{\faBicycle} & Triathlon Demi-Esprit de Montréal distance demi-Ironman en moins de 7h \\
+			\icon{\faLineChart} & Investisseurs boursiers actif avec un rendement annualisé de 15 \% depuis 5 ans \\
+			\icon{\LaTeX} & Contribution dans le package \textit{actuarialsymbol} \\
+			\icon{\faMap} & Plusieurs voyages sac à dos solitaire \\
+			\icon{\faBank} & Actionnaire d'une entreprise de tatouage \\
+		\end{tabularx}
+	\end{table}
+
+\end{textblock}
+
+
+\begin{textblock}{11.35}(9.25, 1)
+	\TitleCoverLetter{\today}{925 Grande Allée Ouest, bureau 230}{Québec, Québec, G1S 1C1}{Industrielle Alliance Assurance auto et habitation}{Candidature \ au \ stage \ d'analyste \ actuariel}\\
+	
+\bigskip
+\large
+\textbf{\textcolor{mainblue}{\substr{Madame,}{1}{4}}%
+\textcolor{black}{\substr{Madame,}{5}{end}}} \\
+\textbf{\textcolor{mainblue}{\substr{Monsieur,}{1}{4}}%
+\textcolor{black}{\substr{Monsieur,}{5}{end}}} \\
+
+\normalsize
+	\ \ \ \ \ \textcolor{mainblue}{\textbf{J’ai}} le plaisir de vous soumettre ma candidature au poste de stagiaire d'analyse actuariel chez IAAH pour l’été 2017. En consultant votre offre de stage, il m’apparaît que mon profil et mes compétences conviennent aux exigences du poste. 
+
+\bigskip
+
+	\ \ \ \ \ \textcolor{mainblue}{\textbf{Mes}} différentes expériences professionnelles m’ont permis d’acquérir plusieurs aptitudes nécessaires à ce stage. Tout d’abord, j’ai développé une grande capacité d’adaptation durant ma formation militaire à titre d’officier de la réserve canadienne.  Au fil de ma formation d’officier, j’ai été confronté à diverses situations où ma facilité d’adaptation a été grandement sollicitée. En effet, lors des simulations d’opérations, l’environnement est très dynamique et il faut constamment s’y adapter et réagir rapidement. Lors d’un exercice de simulation d’opération en zone de conflit, afin de simuler le stress psychologique subit dans une telle situation, nous avons dû passer 5 journées sans dormir. Durant le jour, à répétition, chaque élève officier devait accomplir une série de missions diverses  accompagné des différents membres de son unité. La nuit tombée, nous devions établir des positions fortifiées, afin de soutenir des simulations d’attaque. Constamment, je me suis retrouvé dans des situations que je n’avais jamais rencontrées auparavant et j’ai dû accomplir ces différentes tâches dans une situation de fatigue extrême. Malgré cette difficulté, j’ai réussi à m’adapter et à compléter mon cours d’officier. 
+	
+\bigskip
+	
+	\ \ \ \ \ \textcolor{mainblue}{\textbf{Par}} la suite, j’ai aussi occupé différents postes au sein  du Steak frites St-Paul de Laval. J’ai débuté mon expérience à titre d’aide-serveur, mais rapidement mon autonomie, mon habilité de travailler au sein d’une équipe, ma gestion du stress et des priorités ont été mis en valeur et m’ont permis d’atteindre le poste d’assistant maître d’hôtel. Lorsque j’ai occupé ce poste, ces compétences ont été constamment mises à l’épreuve dans l’exécution de mes fonctions quotidiennes.  Dès le début de mon mandat à titre de maître d’hôtel, j’ai remarqué qu’il manquait un suivi efficace des différentes demandes des clients ainsi que le temps entre les services était trop long et générait une insatisfaction de la clientèle. Afin de remédier à cette situation, j’ai pris l’initiative d’en parler au maître d’hôtel dans le but de trouver une solution viable. Après diverses rencontres et essais, une nouvelle méthode a été implantée afin de solliciter un travail d’équipe plus efficace et de diminuer les insatisfactions de la clientèle. Cette méthode s’est avérée très efficace et productive.
+
+\bigskip
+	
+
+	\ \ \ \ \ \textcolor{mainblue}{\textbf{Pour}} conclure, j'espère que cette brève description de moi-même a suscité votre intérêt pour ma candidature en vue d'une future embauche. J’admire beaucoup les valeurs de IAAH: le développement continu, l’engagement social, l’intégrité et la rigueur ainsi que votre contribution à la prospérité durable. J’aimerais grandement pouvoir y apporter ma contribution par le biais d’un stage. J'ai la conviction que mes différentes compétences et aptitudes me permettront de contribuer aux valeurs de l'entreprise et je serais enthousiaste de pouvoir vous rencontrer pour en discuter lors d'un entretien.
+\bigskip
+
+\textbf{\textcolor{mainblue}{\substr{Cordialement,}{1}{4}}%
+\textcolor{black}{\substr{Cordialement,}{5}{end}}} \\
+
+\includegraphics[height=5\baselineskip]{Cover_Letter/signature.png}
+
+
 \end{textblock}
 \end{document}
