@@ -52,6 +52,7 @@
 \newcommand{\cvlocation}{Québec, Canada}
 \newcommand{\cvlinkedin}{https://www.linkedin.com/in/david-beauchemin-918343108/}
 \newcommand{\github}{https://github.com/davebulaval}
+\newcommand{\Web}{https://davebulaval.github.io}
 
 %Command for vertical centering of text into tabular
 \renewcommand{\tabularxcolumn}[1]{m{#1}}
@@ -91,7 +92,7 @@
 \newcommand{\icon}[1]{
 	\begin{tikzpicture}[baseline=(char.base)]
 		\node[circle,draw,baseline=(char.base),mainblue,fill=mainblue,text=white,
-		inner sep=0.25pt,minimum size=10mm,align=center,text centered](char){\large\textbf{{#1}}};
+		inner sep=0.35pt, minimum size=10mm, align=center,text centered](char){\LARGE\textbf{{#1}}};
 	\end{tikzpicture}}
 
 %Command to create the star scale
@@ -221,6 +222,7 @@ urlcolor={blue!80!black}}
 			\icon{\faHome}&\cvaddress\\
 			\icon{\faMapMarker}&\cvlocation\\
 			\icon{\faGithub}&\href{\github}{Voir GitHub} \\
+			\icon{\faRss}&\href{\Web}{Site Web}\\
 			\icon{\faLinkedin}&\href{\cvlinkedin}{Voir profil}\\
 		\end{tabularx}
 	\end{table}
@@ -236,7 +238,7 @@ urlcolor={blue!80!black}}
 	\end{table}
 
 	\profilesection{Langages de programmation}
-	\skillbar{C/2,Git \faGithub/3.2,\LaTeX/5, Markdown /4.5, R/5.6,Python/5.5,VBA/5.5,SAS/2, SQL/3.5}
+	\skillbar{C/2, \faGit /5,\LaTeX /6.5, Markdown /5, R/5.6,Python/5.5,VBA/5.5,SAS/2, SQL/4}
 \end{textblock}
 
 
@@ -331,6 +333,7 @@ urlcolor={blue!80!black}}
 			\icon{\faHome}&\cvaddress\\
 			\icon{\faMapMarker}&\cvlocation\\
 			\icon{\faGithub}&\href{\github}{Voir GitHub} \\
+			\icon{\faRss}&\href{\Web}{Site Web}\\
 			\icon{\faLinkedin}&\href{\cvlinkedin}{Voir profil}\\
 		\end{tabularx}
 	\end{table}
@@ -347,8 +350,8 @@ urlcolor={blue!80!black}}
 		\begin{tabularx}{7cm}{cX}
 			\icon{\faBicycle} & Triathlon Demi-Esprit de Montréal distance demi-Ironman en moins de 7h \\
 			\icon{\faLineChart} & Investisseurs boursiers actif avec un rendement annualisé de 15 \% depuis 5 ans \\
-			\icon{\LaTeX} & Contribution dans le package \textit{actuarialsymbol} \\
-			\icon{\faMap} & Plusieurs voyages sac à dos solitaire \\
+			\icon{\small\LaTeX} & Contribution dans le package \textit{actuarialsymbol} \\
+			\icon{\faGlobe} & Plusieurs voyages sac à dos solitaire \\
 			\icon{\faBank} & Actionnaire d'une entreprise de tatouage \\
 		\end{tabularx}
 	\end{table}
