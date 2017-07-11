@@ -2,6 +2,8 @@
 English follow
 
 ## Français
+Mon CV ainsi que ma lettre de présentation construit à l'aide de LaTeX.<br/>
+
 ### Contenu
 - Modèle de CV en LaTeX version adaptée pour le français. 
 - Lettre de présentation en LaTeX version adaptée en français. 
@@ -14,7 +16,7 @@ Version originale : https://github.com/SamuelCabralCruz/CV-Template <br />
 (Je ne savais pas forker à l'époque)
 
 ## English
-I am actually working on a english version.<br />
+My CV built in LaTeX. Working on my cover letter.<br/>
 
 ### About
 - Include a CV template with LaTeX
