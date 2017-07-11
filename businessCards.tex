@@ -15,6 +15,10 @@
 \usepackage{graphics}        % load images
 \usepackage[nolinks]{qrcode} % create QR codes
 
+% local path for my logo
+\usepackage{graphicx}
+  	\graphicspath{{C:/Users/David/Documents/GitHub/CV_template/Logo/}} %% genre the path for your local path
+
 %Define CV Variables
 \newcommand{\cvfirstname}{David}
 \newcommand{\cvlastname}{Beauchemin}
@@ -75,6 +79,7 @@
         \node{\textbf{\cvfirstname}}; \\
         \node{\textbf{\cvlastname}}; \\
         \node{\color{jobtitlecolour}\normalsize\textit{\cvtitle}}; \\
+        \node{\includegraphics[width=.25\textwidth]{LogoDB.png}}; \\
       };
       % sep line 1
       \node[below=\seplinedistance of name] (hl1) {};
