@@ -9,6 +9,7 @@ Mon CV ainsi que ma lettre de présentation construit à l'aide de LaTeX.<br/>
 - Lettre de présentation en LaTeX version adaptée en français. 
 - Ainsi que mon CV original de l'Université Laval. 
 - Carte d'affaire
+- Logo
 
 ### Au sujet de la version originale
 La version originale du modèle de CV provient d'un ami. La lettre de présentation et le modèle de carte professionnelle sont de ma création. J'ai modifié le code source afin d'être exécuté en français. J'ai corrigé le problème avec tikz et les caractères français. J'ai trouvé une seconde erreur avec la fonction substr du package coolstr qui empêche d'avoir des titres de section avec des accents. J'ai donc utilisé des titres de section sans accent afin d'utiliser PDFLaTeX. Il est aussi possible d'utiliser XeLaTeX ainsi que les caractères français, par contre, le fini visuel est moins attrayant. Il faudrait jouer avec la police pour améliorer le fini visuel. <br />
