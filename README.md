@@ -1,5 +1,5 @@
 # CV_template <br />
-English follow
+> English follow
 
 ## Français
 Mon CV ainsi que ma lettre de présentation construit à l'aide de LaTeX.<br/>
